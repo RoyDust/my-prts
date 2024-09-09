@@ -4,10 +4,11 @@ import { BookText, Cat, FileText, LayoutGrid, Link, Tags } from "lucide-react";
 import { Switch } from "../ui/switch";
 import { Label } from "../ui/label";
 import cx from "clsx";
+import { Avatar } from "../ui/avatar";
 
 export default function HomeHeader() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [currentPage, setCurrentPage] = useState("article");
+  const [currentPage, setCurrentPage] = useState("");
 
   const pageList = [
     {
@@ -53,6 +54,10 @@ export default function HomeHeader() {
 
   return (
     <div className="flex h-16 w-full items-center justify-end gap-8 bg-zinc-400 px-12">
+      <div>
+        <Avatar />
+      </div>
+
       <div className="flex items-center gap-4 text-white *:flex *:items-center *:gap-2 *:rounded-lg *:px-2 *:py-1 [&>*:hover]:cursor-pointer [&>*:hover]:bg-[#00000010]">
         {pageList.map((item) => (
           <div
