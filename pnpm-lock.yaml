@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@next/font':
+        specifier: ^14.2.11
+        version: 14.2.11(next@14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@radix-ui/react-alert-dialog':
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -218,6 +221,11 @@ packages:
 
   '@next/eslint-plugin-next@14.2.8':
     resolution: {integrity: sha512-ue5vcq9Fjk3asACRDrzYjcGMEN7pMMDQ5zUD+FenkqvlPCVUD1x7PxBNOLfPYDZOrk/Vnl4GHmjj2mZDqPW8TQ==}
+
+  '@next/font@14.2.11':
+    resolution: {integrity: sha512-ektZosXenaRWvc3ZoM7NibTJSN5gQJyCCNG6HYNFTZcxDMgmFALY/6XPsHiCmZZtwL9L9U3HY/96u9x/+KpjUw==}
+    peerDependencies:
+      next: '*'
 
   '@next/swc-darwin-arm64@14.2.8':
     resolution: {integrity: sha512-1VrQlG8OzdyvvGZhGJFnaNE2P10Jjy/2FopnqbY0nSa/gr8If3iINxvOEW3cmVeoAYkmW0RsBazQecA2dBFOSw==}
@@ -2460,6 +2468,10 @@ snapshots:
   '@next/eslint-plugin-next@14.2.8':
     dependencies:
       glob: 10.3.10
+
+  '@next/font@14.2.11(next@14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+    dependencies:
+      next: 14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   '@next/swc-darwin-arm64@14.2.8':
     optional: true
