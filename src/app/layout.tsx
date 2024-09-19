@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { CounterStoreProvider } from "@/providers/counter-store-provider";
 import "tailwindcss/tailwind.css"; // 引入 Tailwind CSS
+import localFont from '@next/font/local';
 
 const myFont = localFont({
   src: "../../public/font/AlibabaPuHuiTi-3-65-Medium.woff2",
