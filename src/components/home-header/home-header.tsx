@@ -6,12 +6,20 @@ import { Label } from "../ui/label";
 import cx from "clsx";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import { FounderMadGrassFont } from "../font/fonts";
+import { useRouter } from "next/navigation";
+
+export interface RouterListProps {
+  key: string;
+  name: string;
+  icon: React.ReactNode;
+}
 
 export default function HomeHeader() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentPage, setCurrentPage] = useState("");
+  const router = useRouter();
 
-  const pageList = [
+  const pageList: RouterListProps[] = [
     {
       key: "article",
       name: "文章",
@@ -49,17 +57,19 @@ export default function HomeHeader() {
     document.documentElement.classList.toggle("dark");
   };
 
-  const handleSwitch = (key: string) => {
-    setCurrentPage(key);
+  const handleSwitch = (item: RouterListProps) => {
+    setCurrentPage(item.key);
+    router.push(`/${item.key}`);
   };
 
   return (
-    <div className="fixed left-0 top-0 flex h-16 w-full items-center justify-between gap-8 bg-white px-12 opacity-60 shadow-md backdrop-filter">
+    <div className="bg-bgColor-light/80 dark:bg-bgColor-dark/80 fixed left-0 top-0 flex h-16 w-full items-center justify-between gap-8 px-12 shadow-md backdrop-blur-md backdrop-filter">
       <div
         className={cx(
-          "font-serif flex w-auto items-center text-4xl font-thin",
+          "font-serif flex w-auto cursor-pointer items-center text-4xl font-thin",
           FounderMadGrassFont.className,
         )}
+        onClick={() => router.push("/")}
       >
         <span>尚蜀书屋</span>
       </div>
@@ -69,7 +79,7 @@ export default function HomeHeader() {
           <div
             className={cx({ "bg-[#61434310]": currentPage === item.key })}
             key={item.key}
-            onClick={() => handleSwitch(item.key)}
+            onClick={() => handleSwitch(item)}
           >
             {item.icon} <span>{item.name}</span>
           </div>

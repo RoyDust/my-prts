@@ -72,7 +72,7 @@ export const HomeContent = () => {
   ];
 
   return (
-    <div className="bg-white/80 text-center backdrop-blur-md">
+    <div className="bg-bgColor-light/80 dark:bg-bgColor-dark/80 text-center backdrop-blur-md">
       <div className="flex flex-col items-center justify-center gap-4 py-20">
         <h1 className="text-3xl font-medium">Project Experience</h1>
         <div className="h-[2px] w-28 bg-sky-400"></div>
@@ -110,7 +110,6 @@ export const HomeContent = () => {
             >
               <h2 className="text-xl font-medium">{item.title}</h2>
               <p className="text-sm font-thin text-gray-600">
-                {" "}
                 「 {item.description} 」
               </p>
             </div>

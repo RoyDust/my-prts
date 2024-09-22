@@ -12,6 +12,10 @@ const config: Config = {
     },
     extend: {
       colors: {
+        bgColor: {
+          light: "#f2f3f5",
+          dark: "#1e1e1e",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
