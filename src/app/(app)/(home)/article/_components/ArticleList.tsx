@@ -5,7 +5,7 @@ function ArticleList() {
   return (
     <div className="h-full min-h-screen w-[56rem] bg-amber-500">
       <div className="flex flex-col gap-0 p-2 *:mb-4">
-        {Array(10)
+        {Array(18)
           .fill(0)
           .map((_, index) => (
             <div
