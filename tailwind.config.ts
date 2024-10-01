@@ -11,6 +11,10 @@ const config: Config = {
       sans: ['"AlibabaPuHuiTi"', ...defaultTheme.fontFamily.sans],
     },
     extend: {
+      clipPath: {
+        "custom-clip":
+          "polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px)",
+      },
       colors: {
         bgColor: {
           light: "#f2f3f5",
