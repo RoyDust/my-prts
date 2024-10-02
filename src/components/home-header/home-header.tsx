@@ -63,7 +63,7 @@ export default function HomeHeader() {
   };
 
   return (
-    <div className="bg-bgColor-light/80 dark:bg-bgColor-dark/80 fixed left-0 top-0 flex h-16 w-full items-center justify-between gap-8 px-12 shadow-md backdrop-blur-md backdrop-filter">
+    <div className="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-between gap-8 bg-bgColor-light/80 px-12 shadow-md backdrop-blur-md backdrop-filter dark:bg-bgColor-dark/80">
       <div
         className={cx(
           "font-serif flex w-auto cursor-pointer items-center text-4xl font-thin",

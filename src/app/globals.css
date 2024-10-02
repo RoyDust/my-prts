@@ -145,3 +145,6 @@ body {
 .clipped-corner {
   clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
 }
+.clipped-corner-left {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+}
