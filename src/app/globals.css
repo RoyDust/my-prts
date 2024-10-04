@@ -148,3 +148,20 @@ body {
 .clipped-corner-left {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
 }
+
+/* 阴影 */
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+/* 放大图片 */
+.enlarge-image {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.enlarge-image:hover {
+  transform: scale(1.1); /* 放大1.1倍 */
+}

@@ -1,12 +1,11 @@
-import { Clock, Eye, ThumbsUp } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 import ArticleItem from "./ArticleItem";
 
 function ArticleList() {
   return (
-    <div className="h-full min-h-screen w-[60rem] rounded-lg bg-amber-500">
-      <div className="flex flex-col gap-2 p-2">
+    // rounded-lg border text-card-foreground hover:shadow-card-darker group flex cursor-pointer gap-2 border-none bg-transparent shadow-card transition-shadow xs:flex-col
+    <div className="h-full min-h-screen w-[60rem] rounded-lg">
+      <div className="flex flex-col gap-4 p-2">
         {Array(18)
           .fill(0)
           .map((_, index) => (

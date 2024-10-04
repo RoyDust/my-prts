@@ -10,7 +10,7 @@ function ArticleItem(props: { key: any; index: number }) {
     <div
       key={index}
       className={cx(
-        "flex h-52 justify-between rounded-lg bg-white p-3 hover:bg-[#e3f3f4]",
+        "hover:shadow-card-darker xs:flex-col group flex h-52 cursor-pointer justify-between gap-2 rounded-lg border border-none bg-transparent bg-white p-3 text-card-foreground shadow-sm shadow-black/10 transition-shadow hover:bg-[#e3f3f4] hover:shadow",
         { "flex-row-reverse": isLeft },
       )}
     >
@@ -18,7 +18,7 @@ function ArticleItem(props: { key: any; index: number }) {
         <div
           className={cx(
             "clipped-image overflow-hidden rounded-md",
-            isLeft ? "pl-1" : "pr-1",
+            isLeft ? "clipped-corner-left pl-1" : "clipped-corner pr-1",
           )}
         >
           <Image
@@ -28,14 +28,18 @@ function ArticleItem(props: { key: any; index: number }) {
             height={0}
             sizes="100vw"
             className={cx(
-              "relative h-auto w-full rounded-md object-cover",
-              isLeft ? "clipped-corner-left" : "clipped-corner",
+              "enlarge-image relative h-auto w-full rounded-md object-cover",
             )}
           />
         </div>
       </div>
       <div className="flex w-1/2 flex-col gap-4">
-        <div className="gpa-4 flex w-full items-center justify-end text-sm text-black/60 *:mr-4 *:flex *:items-center *:gap-1">
+        <div
+          className={cx(
+            "gpa-4 flex w-full items-center text-sm text-black/60 *:mr-4 *:flex *:items-center *:gap-1",
+            isLeft ? "justify-start" : "justify-end",
+          )}
+        >
           <div>
             <Clock size={16} />
             2023-03-01 12:00:00
