@@ -1,6 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { BookText, Cat, FileText, LayoutGrid, Link, Tags } from "lucide-react";
+import {
+  BookText,
+  Cat,
+  FileText,
+  House,
+  LayoutGrid,
+  Link,
+  Tags,
+} from "lucide-react";
 import { Switch } from "../ui/switch";
 import { Label } from "../ui/label";
 import cx from "clsx";
@@ -20,6 +28,11 @@ export default function HomeHeader() {
   const router = useRouter();
 
   const pageList: RouterListProps[] = [
+    {
+      key: "",
+      name: "首页",
+      icon: <House color="rgb(39, 39, 42)" size={16} />,
+    },
     {
       key: "article",
       name: "文章",
