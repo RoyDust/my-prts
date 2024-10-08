@@ -2,7 +2,7 @@ import React from "react";
 
 function Post() {
   return (
-    <div className="min-h-screen bg-red-50">
+    <div className="h-[100rem] bg-red-50">
       {" "}
       下面是一个简单的例子 进程是一个工厂，工厂有它的独立资源 工厂之间相互独立
       线程是工厂中的工人，多个工人协作完成任务 工厂内有一个或多个工人
