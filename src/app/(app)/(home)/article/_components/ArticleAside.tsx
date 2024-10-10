@@ -5,7 +5,7 @@ import React from "react";
 function ArticleAside() {
   return (
     <aside className="min-h-screen w-0 flex-1 rounded-lg">
-      <div className="sticky top-[5rem] flex w-full flex-col gap-4 rounded-lg">
+      <div className="sticky top-[6rem] flex w-full flex-col gap-4 rounded-lg">
         <div className="bg-white p-4">
           <h2 className="text-xl font-thin">搜索</h2>
           <Separator className="mb-4 mt-2" />
