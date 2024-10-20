@@ -28,7 +28,7 @@ function ArticleItem(props: { key: any; index: number }) {
             height={0}
             sizes="100vw"
             className={cx(
-              "enlarge-image relative h-auto w-full rounded-md object-cover",
+              "enlarge-image enlarge-click-area relative h-auto w-full rounded-md object-cover",
             )}
           />
         </div>
