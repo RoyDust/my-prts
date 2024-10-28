@@ -68,7 +68,7 @@ const config: Config = {
       },
     },
   },
-  darkMode: ["class", "class"],
-  plugins: [require("tailwindcss-animate")],
+  darkMode: ["selector", '[data-theme="dark"]'],
+  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
 };
 export default config;
