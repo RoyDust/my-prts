@@ -1,31 +1,31 @@
 import { Clock, Eye, Shapes } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import Welcome from "@/markdown/welcome.mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrism from "rehype-prism-plus";
 import remarkGfm from "remark-gfm";
+import ArticleFooter from "@/components/article-footer/article-footer";
 
 function Post() {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+  // useEffect(() => {
+  //   const toggleVisibility = () => {
+  //     if (window.pageYOffset > 300) {
+  //       setIsVisible(true);
+  //     } else {
+  //       setIsVisible(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", toggleVisibility);
+  //   window.addEventListener("scroll", toggleVisibility);
 
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", toggleVisibility);
+  //   };
+  // }, []);
 
   const content = `# 歡迎來到我的博客
 
@@ -60,10 +60,37 @@ Docker是一個強大的容器化工具，這篇筆記將帶你快速了解Docke
 - 電子郵件: [your.email@example.com](mailto:your.email@example.com)
 - GitHub: [你的GitHub賬號](https://github.com/yourusername)
 
-感謝你的閱讀，希望你能從這裡找到有用的信`;
+感謝你的閱讀，希望你能從這裡找到有用的信
+### 1. [如何使用Python進行數據分析](./articles/python-data-analysis.md)
+
+在這篇文章中，我將介紹如何使用Python進行基本的數據分析。從數據的獲取、清洗到分析，一步步帶你走進數據的世界。
+
+### 2. [Git與GitHub入門指南](./articles/git-github-guide.md)
+
+對於剛入門的開發者來說，Git和GitHub是必不可少的工具。這篇文章將帶你快速上手，掌握基本的Git操作和GitHub的使用。
+
+## 技術筆記
+
+### 1. [JavaScript中的閉包](./notes/javascript-closures.md)
+
+閉包是JavaScript中一個非常重要的概念，理解它對於掌握高級JavaScript編程非常有幫助。
+
+### 2. [Docker入門](./notes/docker-basics.md)
+
+Docker是一個強大的容器化工具，這篇筆記將帶你快速了解Docker的基本概念和使用方法。
+
+## 聯繫我
+
+如果你有任何問題或建議，歡迎通過以下方式聯繫我：
+
+- 電子郵件: [your.email@example.com](mailto:your.email@example.com)
+- GitHub: [你的GitHub賬號](https://github.com/yourusername)
+
+感謝你的閱讀，希望你能從這裡找到有用的信
+`;
 
   return (
-    <div className="h-[100rem] rounded-sm bg-red-200 px-4 *:text-base">
+    <div className="min-h-[100rem] rounded-sm bg-red-200 px-4 pb-4 *:text-base">
       <div className="flex h-full flex-col gap-4 rounded-sm bg-white p-6">
         <h1 className="text-3xl font-bold">Web Locks API: 跨 Tab 资源同步</h1>
         <div className="flex items-center gap-4 text-sm text-slate-400 *:flex *:items-center *:gap-1">
@@ -82,7 +109,7 @@ Docker是一個強大的容器化工具，這篇筆記將帶你快速了解Docke
             <div>前端、JavaScript</div>
           </div>
         </div>
-        <article className="prose dark:prose-invert !max-w-none">
+        <article className="prose !max-w-none dark:prose-invert">
           {/* 下面是一个简单的例子 进程是一个工厂，工厂有它的独立资源
           工厂之间相互独立 线程是工厂中的工人，多个工人协作完成任务
           工厂内有一个或多个工人 工人之间共享空间 与系统联系起来如下 工厂的资源
@@ -107,14 +134,13 @@ Docker是一個強大的容器化工具，這篇筆記將帶你快速了解Docke
           {/* <Welcome /> */}
         </article>
       </div>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-4 right-4 z-50 rounded-full bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600 focus:outline-none"
-        >
-          返回顶部
-        </button>
-      )}
+
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-4 right-4 z-50 rounded-full bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600 focus:outline-none"
+      >
+        返回顶部
+      </button>
     </div>
   );
 }

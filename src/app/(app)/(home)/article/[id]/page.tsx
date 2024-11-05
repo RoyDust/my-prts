@@ -10,13 +10,15 @@ import {
   ThumbsUp,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import ArticleFooter from "@/components/article-footer/article-footer";
+import HomeFooter from "@/components/home-footer/home-footer";
 
 function PostList() {
   const params = useParams();
   console.log(params);
 
   return (
-    <div className="mt-6 flex items-center justify-center">
+    <div className="mt-6 flex flex-col items-center justify-center">
       <div className="relative flex w-[86rem] bg-cyan-50">
         <div className="sticky top-[6rem] flex h-[40rem] w-24 flex-shrink-0 flex-col items-center gap-4 py-8">
           <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white shadow hover:bg-slate-50">
@@ -67,6 +69,12 @@ function PostList() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex w-[86rem]">
+        <ArticleFooter />
+      </div>
+      <div className="flex w-full items-center border-t border-slate-200 bg-white">
+        <HomeFooter />
       </div>
     </div>
   );
