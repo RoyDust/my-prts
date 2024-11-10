@@ -12,14 +12,15 @@ import {
 import { Separator } from "@/components/ui/separator";
 import ArticleFooter from "@/components/article-footer/article-footer";
 import HomeFooter from "@/components/home-footer/home-footer";
+import ArticleFlip from "@/components/article-flip/article-flip";
 
 function PostList() {
   const params = useParams();
   console.log(params);
 
   return (
-    <div className="mt-6 flex flex-col items-center justify-center">
-      <div className="relative flex w-[86rem] bg-cyan-50">
+    <div className="mt-6 flex flex-col items-center justify-center gap-4">
+      <div className="relative flex w-[86rem] border-t-2 border-black/40 bg-cyan-50">
         <div className="sticky top-[6rem] flex h-[40rem] w-24 flex-shrink-0 flex-col items-center gap-4 py-8">
           <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white shadow hover:bg-slate-50">
             <span className="absolute left-8 top-0 rounded-lg bg-slate-400 px-1 py-[1px] text-xs text-white">
@@ -70,8 +71,9 @@ function PostList() {
           </div>
         </div>
       </div>
-      <div className="flex w-[86rem]">
+      <div className="flex w-[64rem] flex-col gap-2">
         <ArticleFooter />
+        <ArticleFlip />
       </div>
       <div className="flex w-full items-center border-t border-slate-200 bg-white">
         <HomeFooter />
