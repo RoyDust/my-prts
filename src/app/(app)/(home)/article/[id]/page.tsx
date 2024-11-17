@@ -20,7 +20,7 @@ function PostList() {
 
   return (
     <div className="mt-6 flex flex-col items-center justify-center gap-4">
-      <div className="relative flex w-[86rem] border-t-2 border-black/40 bg-cyan-50">
+      <div className="relative flex w-[86rem]">
         <div className="sticky top-[6rem] flex h-[40rem] w-24 flex-shrink-0 flex-col items-center gap-4 py-8">
           <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white shadow hover:bg-slate-50">
             <span className="absolute left-8 top-0 rounded-lg bg-slate-400 px-1 py-[1px] text-xs text-white">
@@ -47,10 +47,10 @@ function PostList() {
             <BookOpenText className="text-[#8a919f]" fill="#8a919f" />
           </div>
         </div>
-        <div className="flex-1 overflow-x-auto bg-indigo-50">
+        <div className="flex-1 overflow-x-auto pt-6">
           <Post />
         </div>
-        <div className="sticky top-[6rem] h-[40rem] w-72 flex-shrink-0 bg-lime-50 p-2">
+        <div className="sticky top-[6rem] h-[40rem] w-72 flex-shrink-0 p-2">
           <div className="flex flex-col gap-3 rounded-sm border bg-white p-4">
             <h2 className="text-xl">相关推荐</h2>
             <Separator />
@@ -71,10 +71,7 @@ function PostList() {
           </div>
         </div>
       </div>
-      <div className="flex w-[64rem] flex-col gap-2">
-        <ArticleFooter />
-        <ArticleFlip />
-      </div>
+
       <div className="flex w-full items-center border-t border-slate-200 bg-white">
         <HomeFooter />
       </div>
